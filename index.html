@@ -1,54 +1,82 @@
+<!DOCTYPE html>
 <html lang="en">
-  <!-- 
-  Code Made By Deka Tutorial
-  Youtube: Deka Tutorial
-  Tiktok: @deka_tutorial
-  Instagram : @deka_tutorial
-  -->
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet" />
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.4/dist/sweetalert2.all.min.js"></script>
-    <link rel="stylesheet" href="style.css">
-    <title>Happy Birth Day</title>
-  </head>
-  <body class="body">
-    <div class="open">
-      <div class="card">
-        <h2>Ada pesan buat kamu</h2>
-          <img onclick="mulai()" src="https://dekatutorial.github.io/spesial_mail.png" alt="" srcset="" />
-        <h3>Tekan untuk membuka</h3>
-      </div>
+<!--
+Code Made By Deka Tutorial
+Youtube: Deka Tutorial
+Tiktok: @deka_tutorial
+Instagram: @deka_tutorial
+-->
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.4/dist/sweetalert2.all.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Happy Birth Day</title>
+</head>
+
+<body class="body">
+  <div class="open">
+    <div class="card">
+      <h2>Ada pesan buat kamu</h2>
+      <img onclick="mulai()" src="https://dekatutorial.github.io/spesial_mail.png" alt="" srcset="" />
+      <h3>Tekan untuk membuka</h3>
     </div>
-    <div class="atas" id="atas">
-      <img onclick="mulai()" src="din.jpg" alt="" /> 
-      <img onclick="mulai()" src="din2.jpg" alt="" />
-      <h1>HAPPY BIRTDAY <H1 class="nama">DINDA</H1></h1>
-      <br>
-      <h2>Scroll kebawah cuii</h2>
-    </div>
+  </div>
+  <div class="atas" id="atas">
+    <img onclick="mulai()" src="w2.jpg" alt="" />
+    <img onclick="mulai()" src="w1.jpg" alt="" />
+    <h1>HAPPY BIRTHDAY &nbsp;<span class="nama">WULAN</span></h1>
+    <br>
+    <h2>Scroll kebawah cuii</h2>
+  </div>
 
-    <p data-aos="zoom-in">asik ada yang ultahh</p>
-    <p data-aos="zoom-in">Happy birtday cuii</p>
-    <p data-aos="zoom-in">Jangan lupa apa? PU PU PU </p>
-    <p data-aos="zoom-in">doanya semoga sehat selalu</p>
-    <p data-aos="zoom-in">di lancarkan dan di mudahkan segala urusannya</p>
-    
-    <p data-aos="zoom-in">coba Pencet love nya 
-      <i onclick="tanya()" class="material-icons-sharp"> favorite </i></p>
+  <p data-aos="zoom-in">Asik ada yang ulang tahun nihh</p>
+  <p data-aos="zoom-in">Happy Birtday Wulan</p>
+  <p data-aos="zoom-in">Jangan Lupa apa? Yaps bener Traktiran nya! hehe </p>
+  <p data-aos="zoom-in">Doa dari aku semoga sehat selalu dan di beri kemudahan di setiap proses apapun</p>
+  <p data-aos="zoom-in">Di lancarkan semua urusan nya serta semoga tercapai semua wish kamu ya</p>
 
-    <script>
+  <!-- Use a regular anchor tag for the link -->
+  <p data-aos="zoom-in">coba Pencet love nya buat lanjut
+    <a href="../ultah/index2.html">
+      <span class="material-icons-sharp">favorite</span>
+    </a>
+  </p>
 
-      var musik = "";
+  <script>
+    var musik = "";
+  </script>
 
-    </script>
-    <script> AOS.init({ once: true, }); </script> <script> if(musik == "") { musik = "https://dekatutorial.github.io/Selamat%20Ulang%20Tahun%20[Jamrud].mp3"; } var audio = new Audio(musik); audio.loop = true; audio.autoplay = true; function mulai() { audio.play(); document.querySelector(".open").style = "opacity: 0;"; document.querySelector(".body").style = "overflow-y: scroll;"; setTimeout(function () { document.querySelector(".open").style.display = "none"; }, 1000); } function wa(isi) { window.open("https://api.whatsapp.com/send?text= Makasih ya udah inget ulang tahun aku, di hari spesial ini semoga aku " + isi); } async function tanya() { var { value: kado } = await swal.fire({ title: "Doa kamu buat hari spesial kamu", input: "text", showCancelButton: false, }); if (kado) { await swal.fire("Amiiin paling serius, semoga terkabul ya"); wa(kado); } else { await swal.fire("Jangan dikosongin dong"); tanya(); } } </script> <p class="wm"><span><a href="https://www.instagram.com/em.fikri_">Creat by Fikri</a></span></p>
-  </body>
+  <script>
+    AOS.init({ once: true, });
+  </script>
+
+  <script>
+    if (musik == "") {
+      musik = "https://dekatutorial.github.io/Selamat%20Ulang%20Tahun%20[Jamrud].mp3";
+    }
+    var audio = new Audio(musik);
+    audio.loop = true;
+    audio.autoplay = true;
+
+    function mulai() {
+      audio.play();
+      document.querySelector(".open").style = "opacity: 0;";
+      document.querySelector(".body").style = "overflow-y: scroll;";
+      setTimeout(function () {
+        document.querySelector(".open").style.display = "none";
+      }, 1000);
+    }
+  </script>
+  <p class="wm"><span><a href="https://www.instagram.com/em.fikri_">Created by Fikri</a></span></p>
+</body>
+
 </html>
